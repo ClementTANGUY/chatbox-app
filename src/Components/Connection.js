@@ -14,14 +14,14 @@ class Connection extends Component {
     this.setState({ pseudo })
   }
 
-  //Gestion forcée du click du formulaire, prise en main de la redirection
+  //Gestion du click du formulaire en modifiant le state et sa key goToChat à true, on autorise alors la redirection à la page perso du pseudo
   handleSubmit = event => {
     event.preventDefault()
     this.setState({ goToChat: true })
   }
 
   render() {
-    //Si un pseudo est entré dans le formulaire, puis ensuite validé grâce au bouton, alors seulement redirection vers la template du Chat (avec possibilité  de revenir à la page précédente grâce au props push)
+    //Si un pseudo est entré dans le formulaire, puis validé grâce au bouton, alors seulement la redirection vers le template du pseudo s'opère (avec possibilité  de revenir à la page précédente grâce au props prédéfini push)
     if (this.state.goToChat) {
       return <Redirect push to={`/pseudo/${this.state.pseudo}`} />
     }
@@ -38,7 +38,7 @@ class Connection extends Component {
         type='text'
         required />
 
-      <button type='Submit'>Let's Go !</button>
+      <button type='Submit'>Go!</button>
 
       </form>
 
