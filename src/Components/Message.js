@@ -1,14 +1,21 @@
 import React from 'react'
 
-const Message = ({ pseudo, message }) => {
+const Message = ({ pseudo, message, isUser }) => {
 
-  return (
-    <div>
+  if (isUser(pseudo)) {
+    return (
       <p className="user-message">
         { message }
       </p>
-    </div>
-  )
+    )
+  } else {
+    return (
+      <p className="not-user-message">
+        <strong>{ pseudo } :</strong>{ message }
+      </p>
+    )
+  }
+
 }
 
 

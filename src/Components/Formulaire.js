@@ -8,11 +8,10 @@ class Formulaire extends Component {
     length: this.props.length
   }
 
-  // La fonction createMessage reprend les props addMessage et pseudo du component principal de classe APP
+  // La fonction createMessage reprend les props addMessage, pseudo et length du component principal de classe APP
   createMessage = () => {
 
     const { addMessage, pseudo, length } = this.props
-
     const message = {
       pseudo,
       message: this.state.message
@@ -24,6 +23,7 @@ class Formulaire extends Component {
     //Reset de la valeur entrée dans la textarea
     this.setState({ message: '', length })
   }
+
   // On gère le click de soumission du message en passant la fonction createMessage
   handleSubmit = event => {
     event.preventDefault()
