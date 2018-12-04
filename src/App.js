@@ -27,12 +27,12 @@ class App extends Component {
   messagesRef = createRef()
 
   // On synchronise l'objet principal du state "messages" avec la database de Firebase afin de garder les messages du pseudo en mémoire
-  /*componentDidMount () {
+  componentDidMount () {
     base.syncState('/', {
       context: this,
       state: 'messages'
     })
-  }*/
+  }
 
   // On indique, au moment de la maj du state, à la ref concernée par la div messages que le haut du scroll est toujours sa hauteur max, ce qui permet d'avoir le dernier message ajouté au-dessus de la fenêtre
   componentDidUpdate () {
@@ -48,10 +48,10 @@ class App extends Component {
 
     Object
     .keys(messages)
-    .slice(-10)
-    /*.forEach(key => {
+    .slice(0, -10)
+    .forEach(key => {
       messages[key] = null
-    })*/
+    })
 
     this.setState({ messages })
   }

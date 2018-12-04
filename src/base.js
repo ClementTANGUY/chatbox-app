@@ -1,6 +1,6 @@
 // Implémentation de la base de données Firebase
 
-/*import Rebase from 're-base'
+import Rebase from 're-base'
 import firebase from 'firebase/app'
 import 'firebase/database'
 
@@ -14,5 +14,5 @@ const base = Rebase.createClass(firebase.database())
 
 export { firebaseApp }
 
-export default base*/
+export default base
 
