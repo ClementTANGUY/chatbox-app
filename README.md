@@ -1,3 +1,8 @@
+Educative React app created by Anthony Welc https://www.youtube.com/channel/UChhPkjgG1-iLUOmURGdgQrw
+Chat box allowing to log u to your pseudo and then chat with other pseudos
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
